@@ -1,7 +1,7 @@
 {
   "name": "jsplato",
   "description": "JavaScript source analysis and visualizer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/caozhong1996/jsplato",
   "author": {
     "name": "caozhong",
