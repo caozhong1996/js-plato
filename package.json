@@ -1,19 +1,19 @@
 {
-  "name": "es6-plato",
+  "name": "jsplato",
   "description": "JavaScript source analysis and visualizer",
-  "version": "1.2.4",
-  "homepage": "https://github.com/the-simian/es6-plato",
+  "version": "0.0.1",
+  "homepage": "https://github.com/caozhong1996/jsplato",
   "author": {
-    "name": "Jessse Harlin",
-    "email": "harlinjesse@gmail.com",
-    "url": "http://jesseharlin.net/"
+    "name": "caozhong",
+    "email": "836934184@qq.com",
+    "url": "https://github.com/caozhong1996/jsplato"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/the-simian/es6-plato"
+    "url": "https://github.com/caozhong1996/jsplato"
   },
   "bugs": {
-    "url": "https://github.com/the-simian/es6-plato/issues"
+    "url": "https://github.com/caozhong1996/jsplato/issues"
   },
   "bin": "bin/plato",
   "license": "MIT",

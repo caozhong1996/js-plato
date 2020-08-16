@@ -1,6 +1,7 @@
-# es6-plato
+# jsplato
 
 Visualize JavaScript source complexity with plato.
+It supports `.js .jsx .vue`
 Based on the older es5 plato, this is a port to `es6` and `eslint`
 
 #The Report
@@ -9,22 +10,22 @@ Based on the older es5 plato, this is a port to `es6` and `eslint`
 ## Start in 3 steps.
 
 1. Install.
-   `npm install --save-dev es6-plato`
+   `npm install --save-dev jsplato`
 
 2. Add.
 
-```
+```javascript
 "scripts" : {
-    "complexity-report": "./node_modules/.bin/es6-plato -r -d ./report src",
+    "jsplato": "jsplato -r -d ./report src",
 }
 ```
 
 3. Run.
-   `npm run complexity-report`
+   `npm run jsplato`
 
 ## Installation
 
-Install the module with: `npm install --save-dev es6-plato`
+Install the module with: `npm install --save-dev jsplato`
 
 ## Usage
 
@@ -68,7 +69,7 @@ plato.inspect(src, outputDir, platoArgs, callback);
 
 ```js
 let gulp = require("gulp");
-let plato = require("es6-plato");
+let plato = require("jsplato");
 
 let src = "./scripts/**/*.js";
 let outputDir = "./artifacts/plato";
@@ -114,7 +115,7 @@ gulp.task("analysis", analysis);
 ### From the commandline
 
 ```sh
-Usage : es6-plato [options] -d <output_dir> <input files>
+Usage : jsplato [options] -d <output_dir> <input files>
   -h, --help
       Display this help text.
   -q, --quiet
@@ -142,7 +143,7 @@ Usage : es6-plato [options] -d <output_dir> <input files>
 **Example**
 
 ```shell
-es6-plato -r -d report src
+jsplato -r -d report src
 ```
 
 > Note for Windows Users:
@@ -189,6 +190,7 @@ es6-plato -r -d report src
 | 1.2.2       | reverts globby, 10 doesn't by default handle windows slashes                                     |
 | 1.2.3       | updates eslint and globby                                  |
 | 1.2.4       | updates lodash                                |
+| 1.2.5       | supports .vue                                 |
 
 ## About
 
