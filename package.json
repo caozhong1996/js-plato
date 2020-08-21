@@ -1,7 +1,7 @@
 {
   "name": "jsplato",
   "description": "JavaScript source analysis and visualizer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "homepage": "https://github.com/caozhong1996/jsplato",
   "author": {
     "name": "caozhong",
@@ -41,7 +41,7 @@
     "globby": "10.0.1",
     "lodash": "^4.17.19",
     "posix-getopt": "^1.2.0",
-    "typhonjs-escomplex": "0.0.12",
+    "typhonjs-escomplex": "0.1.0",
     "unixify": "^1.0.0"
   }
 }

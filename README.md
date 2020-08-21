@@ -190,7 +190,13 @@ jsplato -r -d report src
 | 1.2.2       | reverts globby, 10 doesn't by default handle windows slashes                                     |
 | 1.2.3       | updates eslint and globby                                  |
 | 1.2.4       | updates lodash                                |
-| 1.2.5       | supports .vue                                 |
+
+## base on above work
+
+| version     | update                                                                                           |
+| ----------- | ------------------------------------------------------------------------------------------------ |
+| 0.0.1       | supports .vue                                 |
+| 0.0.3       | supports .ts and .tsx                                 |
 
 ## About
 
