@@ -18,6 +18,11 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
+"@babel/parser@^7.0.0":
+  version "7.18.3"
+  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.18.3.tgz#39e99c7b0c4c56cef4d1eed8de9f506411c2ebc2"
+  integrity sha512-rL50YcEuHbbauAFAysNsJA4/f89fGTOBRNs9P81sniKnKAr4xULe5AecolcsKbi88xu0ByWYDj/S1AJ3FSFuSQ==
+
 "@nodelib/fs.scandir@2.1.2":
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.2.tgz#1f981cd5b83e85cfdeb386fc693d4baab392fa54"
@@ -62,6 +67,14 @@
   version "12.7.4"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.7.4.tgz#64db61e0359eb5a8d99b55e05c729f130a678b04"
   integrity sha512-W0+n1Y+gK/8G2P/piTkBBN38Qc5Q1ZSO6B5H3QmPCUewaiXOo2GCAWZ4ElZCcNhjJuBSUSLGFUJnmlCn5+nxOQ==
+
+"@typhonjs/babel-parser@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@typhonjs/babel-parser/-/babel-parser-0.2.0.tgz#30a9bdbb843dd645188fae6a816db2ba2dcb5305"
+  integrity sha512-YKqLZaQAVtOjMiqcJIqex1ezduMefBitoQZjsOqr4US+Yq+cOY/obyloOJ7Ee+XDPaaraVrxWkA3VZjOohtVjQ==
+  dependencies:
+    "@babel/parser" "^7.0.0"
+    babel-runtime "^6.0.0"
 
 acorn-jsx@^5.0.2:
   version "5.0.2"
@@ -130,10 +143,25 @@ astral-regex@^1.0.0:
   resolved "https://registry.yarnpkg.com/astral-regex/-/astral-regex-1.0.0.tgz#6c8c3fb827dd43ee3918f27b82782ab7658a6fd9"
   integrity sha512-+Ryf6g3BKoRc7jfp7ad8tM4TtMiaWvbF/1/sQcZPkkS7ag3D5nMBCe2UfOTONtAkaG0tO0ij3C5Lwmf1EiyjHg==
 
-babylon@^6.0.0:
-  version "6.18.0"
-  resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.18.0.tgz#af2f3b88fa6f5c1e4c634d1a0f8eac4f55b395e3"
-  integrity sha512-q/UEjfGJ2Cm3oKV71DJz9d25TPnq5rhBVL2Q4fA5wcC3jcrdn7+SssEybFIxwAvvP+YCsCYNKughoF33GxgycQ==
+at-least-node@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/at-least-node/-/at-least-node-1.0.0.tgz#602cd4b46e844ad4effc92a8011a3c46e0238dc2"
+  integrity sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==
+
+babel-runtime@^6.0.0:
+  version "6.26.0"
+  resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
+  integrity sha512-ITKNuq2wKlW1fJg9sSW52eepoYgZBggvOAHC0u/CYu/qxQ9EVzThCgR69BnSXLHjy2f7SY5zaQ4yt7H9ZVxY2g==
+  dependencies:
+    core-js "^2.4.0"
+    regenerator-runtime "^0.11.0"
+
+backbone-esnext-events@<1.0.0:
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/backbone-esnext-events/-/backbone-esnext-events-0.3.5.tgz#9a0a068ec7502bd3bd892b1797934780b0b7c5b9"
+  integrity sha512-n208qnhO6kARjSHLZIBs1w6ECpybIBzFE6X1x2XTIGx+U+6qlSctizq9bCh+Xf5XHsSyipIgoxc1grZG7nCxfw==
+  dependencies:
+    babel-runtime "^6.0.0"
 
 balanced-match@^1.0.0:
   version "1.0.0"
@@ -207,6 +235,11 @@ concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
   integrity sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
+
+core-js@^2.4.0:
+  version "2.6.12"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.12.tgz#d9333dfa7b065e347cc5682219d6f690859cc2ec"
+  integrity sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==
 
 cross-spawn@^6.0.5:
   version "6.0.5"
@@ -294,34 +327,34 @@ escape-string-regexp@^1.0.5:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
   integrity sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
 
-escomplex-plugin-metrics-module@^0.0.13:
-  version "0.0.13"
-  resolved "https://registry.yarnpkg.com/escomplex-plugin-metrics-module/-/escomplex-plugin-metrics-module-0.0.13.tgz#ba3fe2af9a1b062dee0e13093b71ed389a1d7168"
-  integrity sha1-uj/ir5obBi3uDhMJO3HtOJodcWg=
+escomplex-plugin-metrics-module@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/escomplex-plugin-metrics-module/-/escomplex-plugin-metrics-module-0.1.0.tgz#7dec0130bd481be13f9c4655b541516495eac1f2"
+  integrity sha512-lEHGInx1gAfgIRJeSTXggTvfEtIG061G0Kzk4hIq0qN6nd2prXZihAPRuLB9DdxCmxXvLVFqi+Bnun9rDw1/zg==
   dependencies:
-    typhonjs-escomplex-commons "^0.0.16"
+    typhonjs-escomplex-commons "^0.1.0"
 
-escomplex-plugin-metrics-project@^0.0.13:
-  version "0.0.13"
-  resolved "https://registry.yarnpkg.com/escomplex-plugin-metrics-project/-/escomplex-plugin-metrics-project-0.0.13.tgz#70349773f0c4b193d58f21ea1032d1375bef0f45"
-  integrity sha1-cDSXc/DEsZPVjyHqEDLRN1vvD0U=
+escomplex-plugin-metrics-project@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/escomplex-plugin-metrics-project/-/escomplex-plugin-metrics-project-0.1.0.tgz#9d5a72207073d2d8cddc4924519dac15f1a110ea"
+  integrity sha512-/9Nf2UJ77qo3TBuWwvFnuNPziHC50nPOxldTZvCEzvwePp+BdI5whlDnJHV9rh3gT75CFODJDM80mBJI+px6/g==
   dependencies:
-    typhonjs-escomplex-commons "^0.0.16"
+    typhonjs-escomplex-commons "^0.1.0"
 
-escomplex-plugin-syntax-babylon@^0.0.13:
-  version "0.0.13"
-  resolved "https://registry.yarnpkg.com/escomplex-plugin-syntax-babylon/-/escomplex-plugin-syntax-babylon-0.0.13.tgz#6e1f299f2011d487dd2b4aceb7143848a0bfdb72"
-  integrity sha1-bh8pnyAR1IfdK0rOtxQ4SKC/23I=
+escomplex-plugin-syntax-babylon@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/escomplex-plugin-syntax-babylon/-/escomplex-plugin-syntax-babylon-0.1.0.tgz#7c8d304d74010bcd6f6aeb9d010f916bc7230655"
+  integrity sha512-KNjE0Rf1jNteb7zwFyv4G3+TIuHqUfnmXpRf5u9iJkrbVXjmbC7Fg5UEA1Net8gvoV9RLVImFFaLZxclaagqAA==
   dependencies:
-    escomplex-plugin-syntax-estree "^0.0.13"
-    typhonjs-escomplex-commons "^0.0.16"
+    escomplex-plugin-syntax-estree "^0.1.0"
+    typhonjs-escomplex-commons "^0.1.0"
 
-escomplex-plugin-syntax-estree@^0.0.13:
-  version "0.0.13"
-  resolved "https://registry.yarnpkg.com/escomplex-plugin-syntax-estree/-/escomplex-plugin-syntax-estree-0.0.13.tgz#fc1286671b8ca68f1f0b801b7364b034182f2145"
-  integrity sha1-/BKGZxuMpo8fC4Abc2SwNBgvIUU=
+escomplex-plugin-syntax-estree@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/escomplex-plugin-syntax-estree/-/escomplex-plugin-syntax-estree-0.1.0.tgz#b5adf0ccd5f3bacbe60d2720b7c4cbf509259809"
+  integrity sha512-uhgBgEhq91rq+1OStjDwpxpS5ehQdq1X/Y7DYCQHplczJN9ZzyoiHostZ4CqywLgDkyicvIyt/8LBYjBaNFc7w==
   dependencies:
-    typhonjs-escomplex-commons "^0.0.16"
+    typhonjs-escomplex-commons "^0.1.0"
 
 eslint-plugin-react@7.14.3:
   version "7.14.3"
@@ -517,14 +550,15 @@ flatted@^2.0.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-2.0.1.tgz#69e57caa8f0eacbc281d2e2cb458d46fdb449e08"
   integrity sha512-a1hQMktqW9Nmqr5aktAux3JMNqaucxGcjtjWnZLHX7yyPCmlSV3M54nGYbqT8K+0GhF3NBgmJCc3ma+WOgX8Jg==
 
-fs-extra@8.1.0:
-  version "8.1.0"
-  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-8.1.0.tgz#49d43c45a88cd9677668cb7be1b46efdb8d2e1c0"
-  integrity sha512-yhlQgA6mnOJUKOsRUFsgJdQCvkKhcz8tlZG5HBQfReYZy46OwLcY+Zia0mtdHsOo9y/hP+CxMN0TU9QxoOtG4g==
+fs-extra@^9.0.0:
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-9.1.0.tgz#5954460c764a8da2094ba3554bf839e6b9a7c86d"
+  integrity sha512-hcg3ZmepS30/7BSFqRvoo3DOMQu7IjqxO5nCDt+zM9XWjb33Wg7ziNT+Qvqbuc3+gWpzO02JubVyk2G4Zvo1OQ==
   dependencies:
+    at-least-node "^1.0.0"
     graceful-fs "^4.2.0"
-    jsonfile "^4.0.0"
-    universalify "^0.1.0"
+    jsonfile "^6.0.1"
+    universalify "^2.0.0"
 
 fs.realpath@^1.0.0:
   version "1.0.0"
@@ -742,10 +776,12 @@ json-stable-stringify-without-jsonify@^1.0.1:
   resolved "https://registry.yarnpkg.com/json-stable-stringify-without-jsonify/-/json-stable-stringify-without-jsonify-1.0.1.tgz#9db7b59496ad3f3cfef30a75142d2d930ad72651"
   integrity sha1-nbe1lJatPzz+8wp1FC0tkwrXJlE=
 
-jsonfile@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/jsonfile/-/jsonfile-4.0.0.tgz#8771aae0799b64076b76640fca058f9c10e33ecb"
-  integrity sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=
+jsonfile@^6.0.1:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/jsonfile/-/jsonfile-6.1.0.tgz#bc55b2634793c679ec6403094eb13698a6ec0aae"
+  integrity sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==
+  dependencies:
+    universalify "^2.0.0"
   optionalDependencies:
     graceful-fs "^4.1.6"
 
@@ -765,10 +801,15 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
-lodash@4.17.15, lodash@^4.17.12, lodash@^4.17.14:
+lodash@^4.17.12, lodash@^4.17.14:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+
+lodash@^4.17.19:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 loose-envify@^1.4.0:
   version "1.4.0"
@@ -993,6 +1034,11 @@ react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.9.0.tgz#21ca9561399aad0ff1a7701c01683e8ca981edcb"
   integrity sha512-tJBzzzIgnnRfEm046qRcURvwQnZVXmuCbscxUO5RWrGTXpon2d4c8mI0D8WE6ydVIm29JiLB6+RslkIvym9Rjw==
 
+regenerator-runtime@^0.11.0:
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz#be05ad7f9bf7d22e056f9726cee5017fbf19e2e9"
+  integrity sha512-MguG95oij0fC3QV3URf4V2SDYGJhJnJGqvIIgdECeODCT98wSWDAJ94SSuVpYQUoTcGUIL6L4yNB7j1DFFHSBg==
+
 regexpp@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/regexpp/-/regexpp-2.0.1.tgz#8d19d31cf632482b589049f8281f93dbcba4d07f"
@@ -1210,56 +1256,67 @@ type-check@~0.3.2:
   dependencies:
     prelude-ls "~1.1.2"
 
-typhonjs-ast-walker@^0.1.0:
+typhonjs-ast-walker@^0.2.0:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/typhonjs-ast-walker/-/typhonjs-ast-walker-0.2.1.tgz#6beb8db8cc45b5bc438c8c95853f8d385413cb3e"
+  integrity sha1-a+uNuMxFtbxDjIyVhT+NOFQTyz4=
+
+typhonjs-escomplex-commons@^0.1.0:
   version "0.1.1"
-  resolved "https://registry.yarnpkg.com/typhonjs-ast-walker/-/typhonjs-ast-walker-0.1.1.tgz#814554a6dad29e1cb2cb62bc8a8e86c174c168e3"
-  integrity sha1-gUVUptrSnhyyy2K8io6GwXTBaOM=
+  resolved "https://registry.yarnpkg.com/typhonjs-escomplex-commons/-/typhonjs-escomplex-commons-0.1.1.tgz#223ed421787b92c27ec0e81945b5de35f1507c41"
+  integrity sha512-nIeiokmcupP3t34KVhynHi0LrjMM6QzbHiwK8+Kl/GnAq4o/jK+cCiu4Zt9mZgJKUzUGRtW1kqoZI2RlAchkgg==
 
-typhonjs-escomplex-commons@^0.0.16:
-  version "0.0.16"
-  resolved "https://registry.yarnpkg.com/typhonjs-escomplex-commons/-/typhonjs-escomplex-commons-0.0.16.tgz#e684e8dc84d3c6cc9598a6dbd614b703f86a7d49"
-  integrity sha1-5oTo3ITTxsyVmKbb1hS3A/hqfUk=
-
-typhonjs-escomplex-module@^0.0.12:
-  version "0.0.12"
-  resolved "https://registry.yarnpkg.com/typhonjs-escomplex-module/-/typhonjs-escomplex-module-0.0.12.tgz#c599bb3de2b38ff2d832625aee2c205f1531be61"
-  integrity sha1-xZm7PeKzj/LYMmJa7iwgXxUxvmE=
+typhonjs-escomplex-module@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/typhonjs-escomplex-module/-/typhonjs-escomplex-module-0.1.0.tgz#04d6719b9a176015b499270f747c56e37b99b1c1"
+  integrity sha512-ViviuBg7Etrl8HeQcwQ9gui9s0rpnFPXltXUFAvOzeQScb+xrLijBq7Z0cveriKQegne/tGTn4ljZg0prwDyTw==
   dependencies:
-    escomplex-plugin-metrics-module "^0.0.13"
-    escomplex-plugin-syntax-babylon "^0.0.13"
-    typhonjs-ast-walker "^0.1.0"
-    typhonjs-escomplex-commons "^0.0.16"
-    typhonjs-plugin-manager "^0.0.3"
+    escomplex-plugin-metrics-module "^0.1.0"
+    escomplex-plugin-syntax-babylon "^0.1.0"
+    typhonjs-ast-walker "^0.2.0"
+    typhonjs-escomplex-commons "^0.1.0"
+    typhonjs-plugin-manager "^0.2.0"
 
-typhonjs-escomplex-project@^0.0.12:
-  version "0.0.12"
-  resolved "https://registry.yarnpkg.com/typhonjs-escomplex-project/-/typhonjs-escomplex-project-0.0.12.tgz#10a1d6bf327f73338a1bd787159fc63246b9c798"
-  integrity sha1-EKHWvzJ/czOKG9eHFZ/GMka5x5g=
+typhonjs-escomplex-project@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/typhonjs-escomplex-project/-/typhonjs-escomplex-project-0.1.0.tgz#ac3fecc6c65b1d1a4f435fab4edd6a659efc319f"
+  integrity sha512-2NdkUsDmxcgsNFqn14CYl5Xfzlig7kKtU/ACOLRN6/nP9c3rlHizVr8YdBYRf2H1sOjmjfNmbC6i1RVnnJZxZQ==
   dependencies:
-    escomplex-plugin-metrics-project "^0.0.13"
-    typhonjs-escomplex-commons "^0.0.16"
-    typhonjs-escomplex-module "^0.0.12"
-    typhonjs-plugin-manager "^0.0.3"
+    escomplex-plugin-metrics-project "^0.1.0"
+    typhonjs-escomplex-commons "^0.1.0"
+    typhonjs-escomplex-module "^0.1.0"
+    typhonjs-plugin-manager "^0.2.0"
 
-typhonjs-escomplex@0.0.12:
-  version "0.0.12"
-  resolved "https://registry.yarnpkg.com/typhonjs-escomplex/-/typhonjs-escomplex-0.0.12.tgz#c2b0e5a7339d786dddd3747b153e7f6433f1fe20"
-  integrity sha1-wrDlpzOdeG3d03R7FT5/ZDPx/iA=
+typhonjs-escomplex@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/typhonjs-escomplex/-/typhonjs-escomplex-0.1.0.tgz#4e21101955ef91c993b617af41eb02c1123a1d75"
+  integrity sha512-B2r31mRH/ZuuogZADqOBP4NPnqBH2mzEP+Pjm+5R8/z0iHLwUTRadkDQL4yv33qsHdIHlvnpOHh6iUo69v2mPA==
   dependencies:
-    babylon "^6.0.0"
+    "@typhonjs/babel-parser" "^0.2.0"
     commander "^2.0.0"
-    typhonjs-escomplex-module "^0.0.12"
-    typhonjs-escomplex-project "^0.0.12"
+    typhonjs-escomplex-module "^0.1.0"
+    typhonjs-escomplex-project "^0.1.0"
 
-typhonjs-plugin-manager@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/typhonjs-plugin-manager/-/typhonjs-plugin-manager-0.0.3.tgz#84dd5e1d01b44119bde493ea656dcef89255ab84"
-  integrity sha1-hN1eHQG0QRm95JPqZW3O+JJVq4Q=
+typhonjs-object-util@^0.4.0:
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/typhonjs-object-util/-/typhonjs-object-util-0.4.2.tgz#1c9c2a709e0478345d809879562731c309e1a554"
+  integrity sha1-HJwqcJ4EeDRdgJh5VicxwwnhpVQ=
+  dependencies:
+    babel-runtime "^6.0.0"
 
-universalify@^0.1.0:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/universalify/-/universalify-0.1.2.tgz#b646f69be3942dabcecc9d6639c80dc105efaa66"
-  integrity sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==
+typhonjs-plugin-manager@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/typhonjs-plugin-manager/-/typhonjs-plugin-manager-0.2.0.tgz#260c4acdf6abbe94fd35ca0a25251839ad9e14d3"
+  integrity sha1-JgxKzfarvpT9NcoKJSUYOa2eFNM=
+  dependencies:
+    babel-runtime "^6.0.0"
+    backbone-esnext-events "<1.0.0"
+    typhonjs-object-util "^0.4.0"
+
+universalify@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/universalify/-/universalify-2.0.0.tgz#75a4984efedc4b08975c5aeb73f530d02df25717"
+  integrity sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==
 
 unixify@^1.0.0:
   version "1.0.0"
